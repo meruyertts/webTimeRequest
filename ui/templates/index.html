@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+</head>
+<body>
+   <h1>What would you like to know?</h1> 
+    <form action="/site-access" method="POST" >
+        <textarea  name="websiteName" rows="5" cols="50" placeholder="enter a website, e.g. google.com"></textarea>
+        <input type="submit" value="Submit" />
+    </form>
+    <form action="/min-time" method="GET" >
+        <p>Whould you like to know which website has the minimum access time?</p>
+        <input type="submit" value="Yes" />
+    </form>
+    <form action="/max-time" method="GET" >
+        <p>Whould you like to know which website has the maximum access time?</p>
+        <input type="submit" value="Yes" />
+    </form>
+    <form action="/stats" method="GET" >
+        <p>Whould you like to know the statistics for all the requests?</p>
+        <input type="submit" value="Yes" />
+    </form>
+    <div>
+        <pre style="color: blueviolet;">{{.SiteAccess}}</pre>
+        <pre style="color: blue;">{{.MinUrltime}}</pre>
+        <pre style="color: green;">{{.MaxUrltime}}</pre>
+    </div>
+    <div>
+        <a href="/">Back Home</a>
+    </div>
+</body>
+</html>
